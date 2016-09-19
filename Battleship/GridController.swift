@@ -105,7 +105,7 @@ class GridController: UIViewController {
         }
         
         func setUpGameLabel () {
-            gameLabel.text = "Let's Play!"
+            gameLabel.text = "Let's sink some ships!"
         }
         
         func setUpGameButtons(v: UIView, totalButtons: Int, buttonsPerRow: Int) {
