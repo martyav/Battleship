@@ -24,7 +24,7 @@ class MontyBrain {
     }
     
     private  var squares = [State]()
-    private var checkerArr = [Int]()
+    /*private*/ var checkerArr = [Int]()
     
     func generateSpot() -> Int {
         let coor: Int
@@ -34,14 +34,18 @@ class MontyBrain {
     
     func setupSquares() {
         squares = Array(repeating: .miss, count: numSquares)
-        for _ in 0...numSpots {
+        for _ in 1...numSpots {
             var newCoor = generateSpot()
             if checkerArr.contains(newCoor) && newCoor != 10 {
                 newCoor += 1
             } else if checkerArr.contains(newCoor) && newCoor == 10 {
                 newCoor -= 1
             } else {
-                checkerArr.append(newCoor)
+                if checkerArr.count < 17 {
+                    checkerArr.append(newCoor)
+                } else {
+                    break
+                }
             }
             squares[newCoor] = .hit
         }
