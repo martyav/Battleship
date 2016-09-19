@@ -35,6 +35,7 @@ class GridController: UIViewController {
             if !loaded {
                 setUpGameButtons(v: buttonContainer, totalButtons: self.howManySquares, buttonsPerRow: 10)
                 self.view.setNeedsDisplay()
+                shipCounter = 0
             }
             loaded = true
         }
@@ -50,11 +51,14 @@ class GridController: UIViewController {
         
         func handleReset() {
             resetButtonColors()
+            brain.checkerArr = [Int]()
             brain.setupSquares()
+            setUpGameButtons(v: buttonContainer, totalButtons: self.howManySquares, buttonsPerRow: 10)
+            shipCounter = 0
         }
     
         func checkWin(sender: UIButton) {
-                    if brain.checkerArr.contains(sender.tag) {
+                    if brain.checkerArr.contains(sender.tag - 1) {
                         shipCounter += 1
                     }
                 if shipCounter == brain.checkerArr.count {
@@ -76,7 +80,7 @@ class GridController: UIViewController {
         func buttonTapped(_ sender: UIButton) {
             gameLabel.text = sender.currentTitle
             
-            if brain.checkCard(sender.tag - 1) {
+            if brain.checkSquare(sender.tag - 1) {
                 if let coor = sender.titleLabel?.text {
                     gameLabel.text = "Ka-boom! \(coor) is a hit!" //these could be methods on checkcard...changing to either hit or miss based on state
                 }
@@ -96,7 +100,6 @@ class GridController: UIViewController {
             let resetButton = UIButton(frame: resetRect)
             
             resetButton.setTitle(resetTitle, for: UIControlState())
-            resetButton.backgroundColor = UIColor.darkGray
             resetButton.addTarget(self, action: #selector(handleReset), for: .touchUpInside)
             view.addSubview(resetButton)
         }

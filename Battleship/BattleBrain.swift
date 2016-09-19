@@ -51,7 +51,7 @@ class MontyBrain {
         }
     }
     
-    func checkCard(_ cardIn: Int) -> Bool {
+    func checkSquare(_ cardIn: Int) -> Bool {
         assert(cardIn < squares.count)  //helps with debugging
         return squares[cardIn] == .hit
     }
