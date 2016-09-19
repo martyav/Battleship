@@ -41,7 +41,7 @@ class MontyBrain {
             } else if checkerArr.contains(newCoor) && newCoor == 10 {
                 newCoor -= 1
             } else {
-                if checkerArr.count < 17 {
+                if checkerArr.count < numSpots {
                     checkerArr.append(newCoor)
                 } else {
                     break
