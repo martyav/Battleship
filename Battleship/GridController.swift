@@ -17,6 +17,7 @@ class GridController: UIViewController {
         
         let brain: MontyBrain
         var loaded: Bool
+        var shipCounter = 0
         let resetTitle = "Reset"
         
         required init?(coder aDecoder: NSCoder) {
@@ -52,17 +53,14 @@ class GridController: UIViewController {
             brain.setupSquares()
         }
     
-        func checkWin() {
-            for v in buttonContainer.subviews {
-                if let button = v as? UIButton {
-                    if button.backgroundColor == UIColor.blue {
-                        break
-                    } else {
+        func checkWin(sender: UIButton) {
+                    if brain.checkerArr.contains(sender.tag) {
+                        shipCounter += 1
+                    }
+                if shipCounter == brain.checkerArr.count {
                         gameLabel.text = "Hooray! You sank all the ships!"
                     }
                 }
-            }
-        }
         //func disableButton() { //need to fix this so we can get more hits
             //for v in buttonContainer.subviews {
                 //if let button = v as? UIButton {
@@ -90,7 +88,7 @@ class GridController: UIViewController {
                 }
                 sender.backgroundColor = UIColor.white
             }
-            checkWin()
+            checkWin(sender: sender)
         }
         
         func setUpResetButton() {
