@@ -11,13 +11,20 @@ import Foundation
 class Ship {
     
     var name: String
-    var parts: Int
+    var numParts: Int
+    var partsSpots = [Int]()
     
-    //if ship is hit, subtract 1 from parts
+    //if ship is hit, subtract 1 from numParts
     
     func hit() -> Int {
-        self.parts -= 1
-        return self.parts
+        self.numParts -= 1
+        return self.numParts
+    }
+    
+    //find part
+    
+    func findPart(part: Int) -> Bool {
+        return self.partsSpots.contains(part)
     }
     
     //write to label.text
@@ -25,7 +32,7 @@ class Ship {
     func msg() -> String {
         let victoryMsg = "You sank my \(name)!"
         let hitMsg = "You hit my \(name)!"
-        if parts == 0 {
+        if numParts == 0 {
             return victoryMsg
         } else {
             return hitMsg
@@ -34,9 +41,9 @@ class Ship {
     
     // init
     
-    init(name:String, parts:Int) {
+    init(name:String, numParts:Int) {
         self.name = name
-        self.parts = parts
+        self.numParts = numParts
     }
     
 }
@@ -45,30 +52,32 @@ class Ship {
 
 class Destroyer: Ship {
     init() {
-        super.init(name: "Destroyer", parts: 2)
+        super.init(name: "Destroyer", numParts: 2)
     }
 }
 
 class Submarine: Ship {
     init() {
-        super.init(name: "Submarine", parts: 3)
+        super.init(name: "Submarine", numParts: 3)
     }
 }
 
 class Cruiser: Ship {
     init() {
-        super.init(name: "Cruiser", parts: 3)
+        super.init(name: "Cruiser", numParts: 3)
     }
 }
 
 class Battleship: Ship {
     init() {
-        super.init(name: "Battleship", parts: 4)
+        super.init(name: "Battleship", numParts: 4)
     }
 }
 
 class Carrier: Ship {
     init() {
-        super.init(name: "Carrier", parts: 5)
+        super.init(name: "Carrier", numParts: 5)
     }
 }
+
+ //Check for Ship
