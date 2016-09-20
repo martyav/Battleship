@@ -19,11 +19,17 @@ class GridController: UIViewController {
         var loaded: Bool
         var shipCounter = 0
         let resetTitle = "Reset"
-        
+    
+        let bigShip = Carrier()
+        let nameSake = Battleship()
+        let medShip = Cruiser()
+        let sub = Submarine()
+        let lilShip = Destroyer()
+    
         required init?(coder aDecoder: NSCoder) {
             self.howManySquares = 100
             self.loaded = false
-            self.brain = MontyBrain(numSquares: self.howManySquares, numSpots: 17)
+            self.brain = MontyBrain(numSquares: self.howManySquares, numSpots: bigShip.parts)
             super.init(coder: aDecoder)
         }
         
@@ -65,13 +71,13 @@ class GridController: UIViewController {
                         gameLabel.text = "Hooray! You sank all the ships!"
                     }
                 }
-        //func disableButton() { //need to fix this so we can get more hits
-            //for v in buttonContainer.subviews {
-                //if let button = v as? UIButton {
-                //    button.isEnabled = false
-          //      }
-            //}
-        //}
+        func disableButton() { //need to fix this so we can get more hits
+            for v in buttonContainer.subviews {
+                if let button = v as? UIButton {
+                    button.isEnabled = false
+                }
+            }
+        }
         
         @IBAction func resetTapped(_ sender: UIButton) {
             handleReset()

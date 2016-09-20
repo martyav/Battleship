@@ -13,10 +13,26 @@ class Ship {
     var name: String
     var parts: Int
     
+    //if ship is hit, subtract 1 from parts
+    
+    func hit() -> Int {
+        self.parts -= 1
+        return self.parts
+    }
+    
+    //write to label.text
+    
     func msg() -> String {
         let victoryMsg = "You sank my \(name)!"
-        return victoryMsg
+        let hitMsg = "You hit my \(name)!"
+        if parts == 0 {
+            return victoryMsg
+        } else {
+            return hitMsg
+        }
     }
+    
+    // init
     
     init(name:String, parts:Int) {
         self.name = name
@@ -28,31 +44,31 @@ class Ship {
 /// Our Ship subclasses ///
 
 class Destroyer: Ship {
-    override init(name: String, parts: Int) {
+    init() {
         super.init(name: "Destroyer", parts: 2)
     }
 }
 
 class Submarine: Ship {
-    override init(name: String, parts: Int) {
+    init() {
         super.init(name: "Submarine", parts: 3)
     }
 }
 
 class Cruiser: Ship {
-    override init(name: String, parts: Int) {
+    init() {
         super.init(name: "Cruiser", parts: 3)
     }
 }
 
 class Battleship: Ship {
-    override init(name: String, parts: Int) {
+    init() {
         super.init(name: "Battleship", parts: 4)
     }
 }
 
 class Carrier: Ship {
-    override init(name: String, parts: Int) {
+    init() {
         super.init(name: "Carrier", parts: 5)
     }
 }
