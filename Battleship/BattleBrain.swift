@@ -10,12 +10,17 @@ import Foundation
 
 class MontyBrain {
     let numSquares: Int
-    let numSpots: Int
+    let ships: [Ship]
     
-    init(numSquares:Int, numSpots: Int) {
+    init(numSquares:Int, ships:[Ship]) {
         self.numSquares = numSquares
-        self.numSpots = numSpots
-        setupSquares()
+        self.ships = ships
+        var numSpots = 0
+        for ship in ships {
+            //setupSquares(numSpots: ship.numParts)
+            numSpots += ship.numParts
+        }
+        setupSquares(numSpots: numSpots)
     }
     
     fileprivate enum State {
@@ -32,7 +37,7 @@ class MontyBrain {
         return coor
     }
     
-    func setupSquares() {
+    func setupSquares(numSpots: Int) /*-> [Int]*/ {
         squares = Array(repeating: .miss, count: numSquares)
         for _ in 1...numSpots {
             var newCoor = generateSpot()
@@ -49,6 +54,8 @@ class MontyBrain {
             }
             squares[newCoor] = .hit
         }
+        //i want this to loop thru the ships individually and hand off arrays containing their coors god damn it
+        //return checkerArr
     }
     
     func checkSquare(_ cardIn: Int) -> Bool {

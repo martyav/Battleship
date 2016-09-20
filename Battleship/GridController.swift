@@ -12,7 +12,8 @@ class GridController: UIViewController {
         
         @IBOutlet weak var gameLabel: UILabel!
         @IBOutlet weak var buttonContainer: UIView!
-        
+        @IBOutlet weak var Score: UILabel!
+    
         let howManySquares: Int
         
         let brain: MontyBrain
@@ -26,13 +27,15 @@ class GridController: UIViewController {
         let sub = Submarine()
         let lilShip = Destroyer()
     
+        //var theFleet = [bigShip, nameSake, medShip, sub, lilShip]
+    
         required init?(coder aDecoder: NSCoder) {
             self.howManySquares = 100
             self.loaded = false
-            self.brain = MontyBrain(numSquares: self.howManySquares, numSpots: bigShip.parts)
+            self.brain = MontyBrain(numSquares: self.howManySquares, ships: [bigShip, nameSake, medShip, sub, lilShip])
             super.init(coder: aDecoder)
         }
-        
+    
         override func viewDidLoad() {
             super.viewDidLoad()
         }
@@ -41,7 +44,6 @@ class GridController: UIViewController {
             if !loaded {
                 setUpGameButtons(v: buttonContainer, totalButtons: self.howManySquares, buttonsPerRow: 10)
                 self.view.setNeedsDisplay()
-                shipCounter = 0
             }
             loaded = true
         }
@@ -58,14 +60,16 @@ class GridController: UIViewController {
         func handleReset() {
             resetButtonColors()
             brain.checkerArr = [Int]()
-            brain.setupSquares()
+            brain.setupSquares(numSpots: 17)
             setUpGameButtons(v: buttonContainer, totalButtons: self.howManySquares, buttonsPerRow: 10)
             shipCounter = 0
+            Score.text = String(shipCounter)
         }
     
         func checkWin(sender: UIButton) {
                     if brain.checkerArr.contains(sender.tag - 1) {
                         shipCounter += 1
+                        Score.text = String(shipCounter)
                     }
                 if shipCounter == brain.checkerArr.count {
                         gameLabel.text = "Hooray! You sank all the ships!"
@@ -88,7 +92,12 @@ class GridController: UIViewController {
             
             if brain.checkSquare(sender.tag - 1) {
                 if let coor = sender.titleLabel?.text {
-                    gameLabel.text = "Ka-boom! \(coor) is a hit!" //these could be methods on checkcard...changing to either hit or miss based on state
+                    gameLabel.text = "\(coor) is a hit!" //lilShip.msg() 
+                    /*
+                     we write a function here that checks ship arrays
+                     if the hit is in a particular ship's array we display
+                     that ship's ship.msg text
+                     */
                 }
                 sender.backgroundColor = UIColor.red
                // disableButton()
