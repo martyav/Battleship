@@ -36,7 +36,7 @@ class MontyBrain {
         coor = Int(arc4random_uniform(UInt32(numSquares)))
         return coor
     }
-    
+
     func setupSquares(numSpots: Int) /*-> [Int]*/ {
         squares = Array(repeating: .miss, count: numSquares)
         for _ in 1...numSpots {
@@ -54,6 +54,7 @@ class MontyBrain {
             }
             squares[newCoor] = .hit
         }
+        
         //i want this to loop thru the ships individually and hand off arrays containing their coors god damn it
         //return checkerArr
     }

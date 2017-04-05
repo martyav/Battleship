@@ -97,5 +97,3 @@ class Carrier: Ship {
         super.init(name: "Carrier", numParts: 5)
     }
 }
-
-
