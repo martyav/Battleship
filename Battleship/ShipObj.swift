@@ -14,7 +14,25 @@ class Ship {
     var numParts: Int
     var partsSpots = [Int]()
     
-    //if ship is hit, subtract 1 from numParts
+    // create parts
+    
+    func placeShipOnBoard() {
+        let rows = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+        let columns = [1,2,3,4,5,6,7,8,9,10]
+        
+        let verticalOrHorizontal = Int(arc4random_uniform(2))
+        let randomIndex = Int(arc4random_uniform(10))
+        var startingRow: String
+        var startingCol: Int
+        
+        if verticalOrHorizontal == 1 {
+            startingCol = columns[randomIndex]
+        } else {
+            startingRow = rows[randomIndex]
+        }
+    }
+    
+    // if ship is hit, subtract 1 from numParts
     
     func hit() -> Int {
         self.numParts -= 1
@@ -48,7 +66,7 @@ class Ship {
     
 }
 
-/// Our Ship subclasses ///
+// Our Ship subclasses //
 
 class Destroyer: Ship {
     init() {
@@ -80,4 +98,4 @@ class Carrier: Ship {
     }
 }
 
- //Check for Ship
+
