@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1ED8D76C1D8CA082007FD4C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */; };
-		1ED8D76E1D8CA082007FD4C7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */; };
-		1ED8D7701D8CA082007FD4C7 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76F1D8CA082007FD4C7 /* GridController.swift */; };
 		1ED8D7731D8CA082007FD4C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7711D8CA082007FD4C7 /* Main.storyboard */; };
 		1ED8D7751D8CA082007FD4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */; };
 		1ED8D7781D8CA082007FD4C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */; };
@@ -22,14 +20,12 @@
 /* Begin PBXFileReference section */
 		1ED8D7681D8CA082007FD4C7 /* Battleship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Battleship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1ED8D76F1D8CA082007FD4C7 /* GridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GridController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1ED8D7721D8CA082007FD4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED8D7771D8CA082007FD4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED8D7791D8CA082007FD4C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D308E7D21D8EF5E2007D66DC /* ShipObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShipObj.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "pixel-sagas_mechfire"; sourceTree = "<group>"; };
+		D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "pixel-sagas_mechfire"; path = "../pixel-sagas_mechfire"; sourceTree = "<group>"; };
 		D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BattleBrain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -47,7 +43,6 @@
 		1ED8D75F1D8CA082007FD4C7 = {
 			isa = PBXGroup;
 			children = (
-				D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */,
 				1ED8D76A1D8CA082007FD4C7 /* Battleship */,
 				1ED8D7691D8CA082007FD4C7 /* Products */,
 			);
@@ -65,16 +60,39 @@
 			isa = PBXGroup;
 			children = (
 				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
-				1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */,
-				1ED8D76F1D8CA082007FD4C7 /* GridController.swift */,
-				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
-				D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */,
-				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
-				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
-				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
+				D367A15B1E9BDD9C0003436A /* Models */,
+				D367A15A1E9BDD900003436A /* Controllers */,
+				D367A1591E9BDD8B0003436A /* UI */,
 				1ED8D7791D8CA082007FD4C7 /* Info.plist */,
 			);
 			path = Battleship;
+			sourceTree = "<group>";
+		};
+		D367A1591E9BDD8B0003436A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
+				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
+				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
+				D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D367A15A1E9BDD900003436A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D367A15B1E9BDD9C0003436A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */,
+				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CD59B11D8E12FC00A2E720 /* BattleBrain.swift in Sources */,
-				1ED8D7701D8CA082007FD4C7 /* GridController.swift in Sources */,
 				1ED8D76C1D8CA082007FD4C7 /* AppDelegate.swift in Sources */,
 				D308E7D31D8EF5E2007D66DC /* ShipObj.swift in Sources */,
-				1ED8D76E1D8CA082007FD4C7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
