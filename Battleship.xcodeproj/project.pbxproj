@@ -17,6 +17,7 @@
 		D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */; };
 		D367A1651E9C1D070003436A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1641E9C1D070003436A /* OptionsViewController.swift */; };
 		D367A1671E9C1D5C0003436A /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1661E9C1D5C0003436A /* Grid.swift */; };
+		D367A16B1E9D9A900003436A /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A16A1E9D9A900003436A /* ViewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePlayerViewController.swift; sourceTree = "<group>"; };
 		D367A1641E9C1D070003436A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		D367A1661E9C1D5C0003436A /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		D367A16A1E9D9A900003436A /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,8 @@
 		D367A1591E9BDD8B0003436A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D367A16A1E9D9A900003436A /* ViewHelpers.swift */,
+				D367A1661E9C1D5C0003436A /* Grid.swift */,
 				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
 				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
 				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
@@ -100,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
-				D367A1661E9C1D5C0003436A /* Grid.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				D367A15D1E9BDF580003436A /* TitleScreenViewController.swift in Sources */,
 				D367A1671E9C1D5C0003436A /* Grid.swift in Sources */,
 				D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */,
+				D367A16B1E9D9A900003436A /* ViewHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

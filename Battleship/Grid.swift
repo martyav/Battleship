@@ -51,7 +51,7 @@ class Square: UIButton {
         let circle = CGRect(x: 0, y: 0, width: diameter, height: diameter)
         peg.path = UIBezierPath(ovalIn: circle).cgPath
         peg.strokeColor = UIColor.blue.cgColor
-        peg.lineWidth = 10
+        peg.lineWidth = 40
         peg.fillColor = UIColor.white.cgColor
         peg.name = "peg"
         

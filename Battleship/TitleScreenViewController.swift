@@ -18,14 +18,25 @@ class TitleScreenViewController: UIViewController {
     var twoPlayer: UIButton!
     var options: UIButton!
     
+    var userInterfaceElements: [UIView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
         
         createViews()
-        positionViews()
-        styleViews()
+        
+        userInterfaceElements = [
+              topImage
+            , publishersTitle
+            , gameTitle
+            , onePlayer
+            , twoPlayer
+            , options
+        ]
+        
+        generateUI([positionViews, styleViews])
         
         onePlayer.addTarget(self, action: #selector(didPressOnePlayer(sender:)), for: .touchUpInside)
         twoPlayer.addTarget(self, action: #selector(didPressTwoPlayer(sender:)), for: .touchUpInside)
@@ -101,19 +112,8 @@ class TitleScreenViewController: UIViewController {
     }
     
     func positionViews() {
-        self.view.addSubview(topImage)
-        self.view.addSubview(publishersTitle)
-        self.view.addSubview(gameTitle)
-        self.view.addSubview(onePlayer)
-        self.view.addSubview(twoPlayer)
-        self.view.addSubview(options)
-        
-        topImage.translatesAutoresizingMaskIntoConstraints = false
-        publishersTitle.translatesAutoresizingMaskIntoConstraints = false
-        gameTitle.translatesAutoresizingMaskIntoConstraints = false
-        onePlayer.translatesAutoresizingMaskIntoConstraints = false
-        twoPlayer.translatesAutoresizingMaskIntoConstraints = false
-        options.translatesAutoresizingMaskIntoConstraints = false
+        addToView(userInterfaceElements, view: self.view)
+        allowProgrammableConstraints(userInterfaceElements)
         
         _ = [
                topImage.bottomAnchor.constraint(equalTo: publishersTitle.topAnchor)
