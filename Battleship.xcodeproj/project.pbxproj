@@ -8,29 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		1ED8D76C1D8CA082007FD4C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */; };
-		1ED8D76E1D8CA082007FD4C7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */; };
-		1ED8D7701D8CA082007FD4C7 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D76F1D8CA082007FD4C7 /* GridController.swift */; };
 		1ED8D7731D8CA082007FD4C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7711D8CA082007FD4C7 /* Main.storyboard */; };
 		1ED8D7751D8CA082007FD4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */; };
 		1ED8D7781D8CA082007FD4C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */; };
 		D308E7D31D8EF5E2007D66DC /* ShipObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308E7D21D8EF5E2007D66DC /* ShipObj.swift */; };
-		D308E7DC1D8F93A5007D66DC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D7791D8CA082007FD4C7 /* Info.plist */; };
-		D308E7DE1D8F95D2007D66DC /* pixel-sagas_mechfire in Resources */ = {isa = PBXBuildFile; fileRef = D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */; };
-		D3CD59B11D8E12FC00A2E720 /* BattleBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */; };
+		D367A15D1E9BDF580003436A /* TitleScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */; };
+		D367A15F1E9BE5030003436A /* Mechfire Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D367A15E1E9BE5030003436A /* Mechfire Bold.otf */; };
+		D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */; };
+		D367A1651E9C1D070003436A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1641E9C1D070003436A /* OptionsViewController.swift */; };
+		D367A1671E9C1D5C0003436A /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1661E9C1D5C0003436A /* Grid.swift */; };
+		D367A16B1E9D9A900003436A /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A16A1E9D9A900003436A /* ViewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1ED8D7681D8CA082007FD4C7 /* Battleship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Battleship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1ED8D76F1D8CA082007FD4C7 /* GridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GridController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1ED8D7721D8CA082007FD4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED8D7771D8CA082007FD4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED8D7791D8CA082007FD4C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D308E7D21D8EF5E2007D66DC /* ShipObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShipObj.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "pixel-sagas_mechfire"; sourceTree = "<group>"; };
-		D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BattleBrain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "pixel-sagas_mechfire"; path = "../pixel-sagas_mechfire"; sourceTree = "<group>"; };
+		D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreenViewController.swift; sourceTree = "<group>"; };
+		D367A15E1E9BE5030003436A /* Mechfire Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mechfire Bold.otf"; path = "Battleship/Assets.xcassets/pixel-sagas_mechfire/Mechfire Bold.dataset/Mechfire Bold.otf"; sourceTree = "<group>"; };
+		D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePlayerViewController.swift; sourceTree = "<group>"; };
+		D367A1641E9C1D070003436A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		D367A1661E9C1D5C0003436A /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		D367A16A1E9D9A900003436A /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +51,7 @@
 		1ED8D75F1D8CA082007FD4C7 = {
 			isa = PBXGroup;
 			children = (
-				D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */,
+				D367A15E1E9BE5030003436A /* Mechfire Bold.otf */,
 				1ED8D76A1D8CA082007FD4C7 /* Battleship */,
 				1ED8D7691D8CA082007FD4C7 /* Products */,
 			);
@@ -65,16 +69,43 @@
 			isa = PBXGroup;
 			children = (
 				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
-				1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */,
-				1ED8D76F1D8CA082007FD4C7 /* GridController.swift */,
-				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
-				D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */,
-				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
-				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
-				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
+				D367A15B1E9BDD9C0003436A /* Models */,
+				D367A15A1E9BDD900003436A /* Controllers */,
+				D367A1591E9BDD8B0003436A /* UI */,
 				1ED8D7791D8CA082007FD4C7 /* Info.plist */,
 			);
 			path = Battleship;
+			sourceTree = "<group>";
+		};
+		D367A1591E9BDD8B0003436A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D367A16A1E9D9A900003436A /* ViewHelpers.swift */,
+				D367A1661E9C1D5C0003436A /* Grid.swift */,
+				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
+				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
+				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
+				D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D367A15A1E9BDD900003436A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */,
+				D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */,
+				D367A1641E9C1D070003436A /* OptionsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D367A15B1E9BDD9C0003436A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = C4Q;
 				TargetAttributes = {
 					1ED8D7671D8CA082007FD4C7 = {
@@ -136,10 +167,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D308E7DE1D8F95D2007D66DC /* pixel-sagas_mechfire in Resources */,
+				D367A15F1E9BE5030003436A /* Mechfire Bold.otf in Resources */,
 				1ED8D7781D8CA082007FD4C7 /* LaunchScreen.storyboard in Resources */,
 				1ED8D7751D8CA082007FD4C7 /* Assets.xcassets in Resources */,
-				D308E7DC1D8F93A5007D66DC /* Info.plist in Resources */,
 				1ED8D7731D8CA082007FD4C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,11 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CD59B11D8E12FC00A2E720 /* BattleBrain.swift in Sources */,
-				1ED8D7701D8CA082007FD4C7 /* GridController.swift in Sources */,
 				1ED8D76C1D8CA082007FD4C7 /* AppDelegate.swift in Sources */,
 				D308E7D31D8EF5E2007D66DC /* ShipObj.swift in Sources */,
-				1ED8D76E1D8CA082007FD4C7 /* FirstViewController.swift in Sources */,
+				D367A1651E9C1D070003436A /* OptionsViewController.swift in Sources */,
+				D367A15D1E9BDF580003436A /* TitleScreenViewController.swift in Sources */,
+				D367A1671E9C1D5C0003436A /* Grid.swift in Sources */,
+				D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */,
+				D367A16B1E9D9A900003436A /* ViewHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +231,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -249,6 +282,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
