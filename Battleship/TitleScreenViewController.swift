@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class TitleScreenViewController: UIViewController {
 
+    var topImage: UIImageView!
+    var publishersTitle: UILabel!
     var gameTitle: UILabel!
     var onePlayer: UIButton!
     var twoPlayer: UIButton!
+    var options: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,10 @@ class TitleScreenViewController: UIViewController {
         createViews()
         positionViews()
         styleViews()
+        
+        onePlayer.addTarget(self, action: #selector(didPressOnePlayer(sender:)), for: .touchUpInside)
+        twoPlayer.addTarget(self, action: #selector(didPressTwoPlayer(sender:)), for: .touchUpInside)
+        options.addTarget(self, action: #selector(didPressOptions(sender:)), for: .touchUpInside)
 
     }
     
@@ -31,45 +39,96 @@ class TitleScreenViewController: UIViewController {
         animateTitle()
     }
     
+    func didPressOnePlayer(sender: UIButton) {
+        AudioServicesPlaySystemSound(1033)
+        animateButton(sender)
+        
+        self.present(OnePlayerViewController(), animated: true, completion: nil)
+    }
+    
+    func didPressTwoPlayer(sender: UIButton) {
+        AudioServicesPlaySystemSound(1033)
+        animateButton(sender)
+    }
+    
+    func didPressOptions(sender: UIButton) {
+        AudioServicesPlaySystemSound(1033)
+        animateButton(sender)
+        
+        self.present(OptionsViewController(), animated: true, completion: nil)
+    }
+    
     func createViews() {
+        topImage = UIImageView()
+        publishersTitle = UILabel()
         gameTitle = UILabel()
         onePlayer = UIButton()
         twoPlayer = UIButton()
+        options = UIButton()
     }
     
     func styleViews() {
-        gameTitle.font = UIFont(name: "Mechfire-Bold", size: 40)
+        topImage.contentMode = .scaleAspectFill
+        let tintImage = #imageLiteral(resourceName: "titleImage").withRenderingMode(.alwaysTemplate)
+        topImage.image = tintImage
+        topImage.tintColor = .white
+        
+        publishersTitle.font = UIFont(name: "Avenir-BlackOblique", size: 20)
+        publishersTitle.textColor = .white
+        publishersTitle.textAlignment = .center
+        publishersTitle.text = "AC3.2 & Jason Gresh present..."
+        
+        gameTitle.font = UIFont(name: "Mechfire-Bold", size: 45)
         gameTitle.textColor = .white
         gameTitle.textAlignment = .center
         gameTitle.text = "Battleship"
         
-        onePlayer.titleLabel!.font = UIFont(name: "Menlo-Bold", size: 20)
-        twoPlayer.titleLabel!.font = UIFont(name: "Menlo-Bold", size: 20)
-        onePlayer.setTitle("• One Player".uppercased(), for: .normal)
-        twoPlayer.setTitle("• Two Players".uppercased(), for: .normal)
+        _ = [
+              onePlayer
+            , twoPlayer
+            , options
+        ].map { $0.titleLabel!.font = UIFont(name: "Menlo-Bold", size: 20) }
         
         _ = [
-                onePlayer
-               , twoPlayer
+              onePlayer
+            , twoPlayer
+            , options
         ].map { $0.tintColor = .white }
+        
+        onePlayer.setTitle("• One Player".uppercased(), for: .normal)
+        twoPlayer.setTitle("• Two Players".uppercased(), for: .normal)
+        options.setTitle("• Options".uppercased(), for: .normal)
     }
     
     func positionViews() {
+        self.view.addSubview(topImage)
+        self.view.addSubview(publishersTitle)
         self.view.addSubview(gameTitle)
         self.view.addSubview(onePlayer)
         self.view.addSubview(twoPlayer)
+        self.view.addSubview(options)
         
+        topImage.translatesAutoresizingMaskIntoConstraints = false
+        publishersTitle.translatesAutoresizingMaskIntoConstraints = false
         gameTitle.translatesAutoresizingMaskIntoConstraints = false
         onePlayer.translatesAutoresizingMaskIntoConstraints = false
         twoPlayer.translatesAutoresizingMaskIntoConstraints = false
+        options.translatesAutoresizingMaskIntoConstraints = false
         
         _ = [
-              gameTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+               topImage.bottomAnchor.constraint(equalTo: publishersTitle.topAnchor)
+            , topImage.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            , topImage.widthAnchor.constraint(equalTo: view.widthAnchor)
+            , publishersTitle.bottomAnchor.constraint(equalTo: gameTitle.topAnchor)
+            , publishersTitle.centerXAnchor.constraint(equalTo: gameTitle.centerXAnchor)
+            , gameTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             , gameTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             , onePlayer.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            , onePlayer.topAnchor.constraint(equalTo: gameTitle.bottomAnchor, constant: 8)
+            , onePlayer.topAnchor.constraint(equalTo: gameTitle.bottomAnchor, constant: 4)
             , twoPlayer.leadingAnchor.constraint(equalTo: onePlayer.leadingAnchor)
-            , twoPlayer.topAnchor.constraint(equalTo: onePlayer.bottomAnchor, constant: 8)
+            , twoPlayer.topAnchor.constraint(equalTo: onePlayer.bottomAnchor, constant: 4)
+            , options.leadingAnchor.constraint(equalTo: twoPlayer.leadingAnchor)
+            , options.topAnchor.constraint(equalTo: twoPlayer.bottomAnchor, constant: 4)
         ].map { $0.isActive = true }
     }
     
@@ -79,6 +138,15 @@ class TitleScreenViewController: UIViewController {
         }, completion: { finish in
             self.gameTitle.alpha = 1.0
         })
+    }
+    
+    func animateButton(_ button: UIButton) {
+        UIView.animate(withDuration: 0.25, delay: 0, options: [.autoreverse], animations: {
+            button.alpha = 0.5
+        }, completion: { finish in
+            button.alpha = 1.0
+        })
+
     }
     
 

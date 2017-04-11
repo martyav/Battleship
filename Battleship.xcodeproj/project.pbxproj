@@ -14,7 +14,9 @@
 		D308E7D31D8EF5E2007D66DC /* ShipObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308E7D21D8EF5E2007D66DC /* ShipObj.swift */; };
 		D367A15D1E9BDF580003436A /* TitleScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */; };
 		D367A15F1E9BE5030003436A /* Mechfire Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D367A15E1E9BE5030003436A /* Mechfire Bold.otf */; };
-		D3CD59B11D8E12FC00A2E720 /* BattleBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */; };
+		D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */; };
+		D367A1651E9C1D070003436A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1641E9C1D070003436A /* OptionsViewController.swift */; };
+		D367A1671E9C1D5C0003436A /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367A1661E9C1D5C0003436A /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,9 @@
 		D308E7DD1D8F95D2007D66DC /* pixel-sagas_mechfire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "pixel-sagas_mechfire"; path = "../pixel-sagas_mechfire"; sourceTree = "<group>"; };
 		D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreenViewController.swift; sourceTree = "<group>"; };
 		D367A15E1E9BE5030003436A /* Mechfire Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mechfire Bold.otf"; path = "Battleship/Assets.xcassets/pixel-sagas_mechfire/Mechfire Bold.dataset/Mechfire Bold.otf"; sourceTree = "<group>"; };
-		D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BattleBrain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePlayerViewController.swift; sourceTree = "<group>"; };
+		D367A1641E9C1D070003436A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		D367A1661E9C1D5C0003436A /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				D367A15C1E9BDF580003436A /* TitleScreenViewController.swift */,
+				D367A1601E9C10BD0003436A /* OnePlayerViewController.swift */,
+				D367A1641E9C1D070003436A /* OptionsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -93,8 +99,8 @@
 		D367A15B1E9BDD9C0003436A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3CD59B01D8E12FC00A2E720 /* BattleBrain.swift */,
 				D308E7D21D8EF5E2007D66DC /* ShipObj.swift */,
+				D367A1661E9C1D5C0003436A /* Grid.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -172,10 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CD59B11D8E12FC00A2E720 /* BattleBrain.swift in Sources */,
 				1ED8D76C1D8CA082007FD4C7 /* AppDelegate.swift in Sources */,
 				D308E7D31D8EF5E2007D66DC /* ShipObj.swift in Sources */,
+				D367A1651E9C1D070003436A /* OptionsViewController.swift in Sources */,
 				D367A15D1E9BDF580003436A /* TitleScreenViewController.swift in Sources */,
+				D367A1671E9C1D5C0003436A /* Grid.swift in Sources */,
+				D367A1611E9C10BD0003436A /* OnePlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
